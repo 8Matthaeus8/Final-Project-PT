@@ -1,7 +1,6 @@
 // server.js
-const express = require('express');
+const express = require('require');
 const app = express();
-// Using process.env.PORT is crucial for deployment on PaaS like Render
 const PORT = process.env.PORT || 3000; 
 
 // Define variables for clean code and easy updates
@@ -41,7 +40,6 @@ app.get('/', (req, res) => {
             background-position: center; 
             background-repeat: no-repeat; 
             background-attachment: fixed; 
-            /* Overlay has been removed for full GIF visibility */
           }
           
           /* Container Style */
@@ -49,8 +47,8 @@ app.get('/', (req, res) => {
             max-width: 700px; 
             padding: 50px 70px;
             border-radius: 12px;
-            background-color: rgb(255, 255, 255); /* Fully opaque white */
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); /* Slightly darker shadow for a better floating effect */
+            background-color: rgb(255, 255, 255); 
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2); 
             border: 1px solid #e0e0e0; 
             z-index: 10; 
             position: relative; 
@@ -68,18 +66,21 @@ app.get('/', (req, res) => {
             font-size: 2.2em; 
             font-weight: 700; 
             color: #2c3e50; 
-            margin: 0; 
+            margin: 0 0 45px 0; /* Added space below quote */
             line-height: 1.3;
           }
 
-          /* Details Section */
+          /* Details Section (New Footer Style) */
           .details {
-            font-size: 1.1em; 
-            font-weight: 500; 
-            color: #3498db; 
+            font-size: 0.9em; /* Smaller font size */
+            font-weight: 400; 
+            color: #7f8c8d; /* Subtle gray color */
             line-height: 1.8;
-            margin-bottom: 5px; 
-            margin-top: 35px; 
+            margin-top: 5px; 
+            letter-spacing: 0.05em; /* Small letter spacing for style */
+          }
+          .detail-name {
+              font-weight: 600; /* Name slightly bolder */
           }
         </style>
       </head>
@@ -91,8 +92,9 @@ app.get('/', (req, res) => {
           </div>
           
           <div class="details">
-            <p>Name: ${myName}</p>
-            <p>Section: ${mySection}</p>
+            <span class="detail-name">Name: ${myName}</span>
+            &mdash;
+            <span class="detail-section">Section: ${mySection}</span>
           </div>
         </div>
       </body>
