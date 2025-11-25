@@ -1,6 +1,7 @@
 // server.js
-const express = require('require');
+const express = require('express'); // <-- FIXED: Was require('require'), now correct
 const app = express();
+// Using process.env.PORT is crucial for deployment on PaaS like Render
 const PORT = process.env.PORT || 3000; 
 
 // Define variables for clean code and easy updates
@@ -66,21 +67,21 @@ app.get('/', (req, res) => {
             font-size: 2.2em; 
             font-weight: 700; 
             color: #2c3e50; 
-            margin: 0 0 45px 0; /* Added space below quote */
+            margin: 0 0 45px 0;
             line-height: 1.3;
           }
 
           /* Details Section (New Footer Style) */
           .details {
-            font-size: 0.9em; /* Smaller font size */
+            font-size: 0.9em; 
             font-weight: 400; 
-            color: #7f8c8d; /* Subtle gray color */
+            color: #7f8c8d; 
             line-height: 1.8;
             margin-top: 5px; 
-            letter-spacing: 0.05em; /* Small letter spacing for style */
+            letter-spacing: 0.05em; 
           }
           .detail-name {
-              font-weight: 600; /* Name slightly bolder */
+              font-weight: 600;
           }
         </style>
       </head>
