@@ -6,7 +6,8 @@ const PORT = process.env.PORT || 3000;
 
 // Define variables for clean code and easy updates
 const staticQuote = "The best way to predict the future is to create it.";
-const GIF_URL = "https://github.com/8Matthaeus8/Final-Project-PT/blob/main/assets/background11.gif"; 
+// 🔴 FIX: Changed the URL from 'github.com/.../blob/' to the correct 'raw.githubusercontent.com/' format
+const GIF_URL = "https://raw.githubusercontent.com/8Matthaeus8/Final-Project-PT/main/assets/background11.gif"; 
 const myName = "JAN MATTHEW A. TANCHANCO";
 const mySection = "NT - 4101";
 
