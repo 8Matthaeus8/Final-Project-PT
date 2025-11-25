@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000; 
 
-const staticQuote = "The best way to predict the future is to create it.";
+const staticQuote = "The Best Way To Predict The Future Is To Create It.";
 // Make sure this GIF_URL is the correct, verified Raw URL
 const GIF_URL = "https://raw.githubusercontent.com/8Matthaeus8/Final-Project-PT/main/assets/background11.gif"; 
 const myName = "JAN MATTHEW A. TANCHANCO";
